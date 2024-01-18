@@ -31,10 +31,10 @@ function AppUI() {
                             onDelete={() => deleteToDo(toDo.text)} />
                     ))}
                 </TodoList> 
-        <CreateToDoButton  /> 
+        <CreateToDoButton  setOpenModal={setOpenModal} /> 
         {openModal && (
             <Modal>
-                La funcionalidad de agregar ToDo
+                <ToDoForm/>
             </Modal>
         )}
         
