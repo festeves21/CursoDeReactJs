@@ -1,14 +1,12 @@
 import "./CreateToDoButton.css"
 
-function CreateToDoButton(props){
+function CreateToDoButton(){
     return(
         <button className="CreateTodoButton"
          >+</button>
     );
 
 }
-
-
   export {CreateToDoButton} ;
 
   

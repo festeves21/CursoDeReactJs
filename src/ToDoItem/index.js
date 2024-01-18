@@ -1,7 +1,7 @@
 
-import {CompleteIcon} from"./CompleteIcon"
+import {CompleteIcon} from"../TodoIcon/CompleteIcon"
 import "./ToDoItem.css";
-import {DeleteIcon} from"./DeleteIcon"
+import {DeleteIcon} from"../TodoIcon/DeleteIcon"
 
 function TodoItem(props) {
   return (
