@@ -8,11 +8,12 @@ import { ToDosLoading } from '../ToDosLoading';
 import { ToDosError } from '../ToDosError';
 import { EmptyToDos } from '../EmptyToDos';
 import { ToDoContext } from '../ToDoContext';
+import { Modal } from '../Modal';
 
 
 function AppUI() {
 
-     const { loading, error, searchedTodos, completeToDo, deleteToDo } = React.useContext(ToDoContext);  
+     const { loading, error, searchedTodos, completeToDo, deleteToDo,openModal,setOpenModal, } = React.useContext(ToDoContext);  
  /*   const {loading,error,searchedTodos,completeToDo,deleteToDo} = React.useContext(ToDoContext)*/
     return (<>  
         <TodoCounter />
@@ -31,6 +32,13 @@ function AppUI() {
                     ))}
                 </TodoList> 
         <CreateToDoButton  /> 
+        {openModal && (
+            <Modal>
+                La funcionalidad de agregar ToDo
+            </Modal>
+        )}
+        
+
     </>);
 }
 export { AppUI };

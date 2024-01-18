@@ -8,6 +8,9 @@ function ToDoProvider({children} ) {
     const { item: toDo, saveItem: saveToDos, loading, error 
     } = useLocalStorage('TODOS_V1', []);
     const [searchValueFe, setShareValueFe] = React.useState('');
+    const [openModal, setOpenModal] = React.useState(true);
+
+
 
     const completedToDo = toDo.filter(
         array => array.completed).length;
@@ -50,8 +53,9 @@ function ToDoProvider({children} ) {
         setShareValueFe, 
         searchedTodos, 
         completeToDo, 
-        deleteToDo, 
-    
+        deleteToDo,
+        openModal,
+        setOpenModal,
     }}>
         {children}
     </ToDoContext.Provider>
